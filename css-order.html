@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UFT-8">
+        <title>test css order</title>
+        <style type="text/css">
+            div#parent { background-color: blue; }
+            #parent { background-color: red; }
+            p {background-color: purple; }
+            #parent #child { background-color: green; }
+            #parent .child-class { background-color: yellow; }
+            #parent p#child { background-color: orange; }
+            #parent p#child.child-class { background-color: pink; }
+        </style>
+    </head>
+    <body>
+        <div id="parent" class="parent-class">
+            <p id="child" class="child-class">
+                TEST TEXT
+            </p>
+        </div>
+    </body>
+</html>

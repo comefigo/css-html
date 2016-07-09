@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UFT-8">
+        <title>Media Query</title>
+        <style type="text/css">
+            .menu, .content {
+                background-color: pink;
+            }
+
+            .mb-disp, .pc-disp {
+                background-color: blue;
+                color: #fff;
+                margin-bottom: 30px;
+                padding: 10px;
+            }
+
+            @media screen and (max-width: 300px) {
+                .pc-disp {
+                    display: none;
+                }
+
+                .mb-disp {
+                    display: block;
+                }
+
+            }
+
+            @media screen and (min-width: 301px) {
+                .pc-disp {
+                    display: block;
+                }
+
+                .mb-disp {
+                    display: none;
+                }
+
+                .menu, .content {
+                    width: 49%;
+                    display: inline-block;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="mb-disp">Mobile</div>
+        <div class="pc-disp">PC</div>
+        <div class="menu">メニュー</div>
+        <div class="content">コンテンツ</div>
+    </body>
+</html>
